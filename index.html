@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tumisang Khabisi</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #0b0f1a;
+  color: #e5e7eb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 90%;
+  max-width: 900px;
+  background: #020617;
+  border-radius: 18px;
+  padding: 35px;
+  box-shadow: 0 25px 70px rgba(0,0,0,0.7);
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+header h1 {
+  font-size: 2.3rem;
+}
+
+header p {
+  color: #94a3b8;
+  margin-top: 10px;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.tabs button {
+  background: transparent;
+  border: 1px solid #1e293b;
+  color: #cbd5f5;
+  padding: 10px 26px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tabs button:hover {
+  background: #1e293b;
+}
+
+.tabs button.active {
+  background: #6366f1;
+  border-color: #6366f1;
+  color: white;
+}
+
+/* Sections */
+.section {
+  display: none;
+  animation: fadeSlide 0.6s ease forwards;
+}
+
+.section.active {
+  display: block;
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Portfolio */
+.story p {
+  line-height: 1.9;
+  margin-bottom: 18px;
+  color: #cbd5f5;
+}
+
+/* Projects */
+.project {
+  border: 1px solid #1e293b;
+  border-radius: 14px;
+  padding: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.project:hover {
+  background: #020617;
+  border-color: #6366f1;
+}
+
+.project h3 {
+  color: #e0e7ff;
+  margin-bottom: 8px;
+}
+
+.project span {
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+.coming-soon {
+  margin-top: 15px;
+  color: #6366f1;
+  display: none;
+}
+
+/* Contact */
+.contact-links p {
+  margin-bottom: 15px;
+}
+
+.contact-links a {
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.email { color: #6366f1; }
+.whatsapp { color: #22c55e; }
+.facebook { color: #3b82f6; }
+.x { color: #e5e7eb; }
+
+.contact-links a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  margin-top: 35px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #64748b;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+  <h1>Tumisang Khabisi</h1>
+  <p>A journey driven by curiosity, learning, and technology</p>
+</header>
+
+<div class="tabs">
+  <button class="tab-btn active" data-tab="portfolio">Portfolio</button>
+  <button class="tab-btn" data-tab="projects">Projects</button>
+  <button class="tab-btn" data-tab="contact">Contact</button>
+</div>
+
+<!-- PORTFOLIO -->
+<div id="portfolio" class="section active">
+  <div class="story">
+    <p>
+      For several years, I was uncertain about the direction I wanted my life to take. However, one thing was always clear—I had a strong curiosity for learning, creativity, and technology.</p>
+      
+<p>From an early stage, I was deeply interested in anything tech-related. Even without formal knowledge or access to a computer, I experimented using only my mobile phone. I explored tools, systems, and software out of pure curiosity, trying to understand how technology works behind the scenes. Although I didn’t always know exactly what I was doing, the passion to learn and experiment kept driving me forward.</p>
+
+<p>Later, I enrolled at the National University of Lesotho, still unsure of which career path to pursue. I did my BSC general first year, and It was during this period that Computer Science stood out to me. I realised that it aligned perfectly with my natural interest in technology, logical thinking, and problem-solving. This realisation awakened an ambition within me—one that had always been there but had never been fully defined. Essentially, coming to a conclusion to major in Computer science and mathematics in my second year. </p>
+
+<p>Since then, my passion for technology has grown rapidly. I have recently begun learning software development seriously, focusing on coding, building projects, and strengthening my understanding of how software can be used to solve real-world problems. I am working towards becoming a self-taught software engineer, continuously improving my skills through practice, discipline, and independent learning. </p>
+
+<p>My long-term goal is to build impactful projects, offer professional computer-related services, and use technology to create meaningful change in people’s lives and in the world.</p>
+  </div>
+</div>
+
+<!-- PROJECTS -->
+<div id="projects" class="section">
+  <div class="project" onclick="showComingSoon()">
+    <h3>ModuleMind.ai</h3>
+    <span>AI-powered education platform</span>
+
+    <div id="comingSoon" class="coming-soon">
+      🚧 Coming soon
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<div id="contact" class="section">
+  <div class="contact-links">
+    <p>
+      📧 Email:
+      <a class="email" href="mailto:khabisitumisang@gmail.com">
+        khabisitumisang@gmail.com
+      </a>
+    </p>
+
+    <p>
+      💬 WhatsApp:
+      <a class="whatsapp" href="https://wa.me/26663880157" target="_blank">
+        +266 6388 0157
+      </a>
+    </p>
+
+    <p>
+      ❌ X (Twitter):
+      <a class="x" href="https://x.com/khabisixivk" target="_blank">
+        @khabisixivk
+      </a>
+    </p>
+
+    <p>
+      🌐 Facebook:
+      <a class="facebook"
+         href="https://www.facebook.com/profile.php?id=100088578038262"
+         target="_blank">
+        Visit my Facebook profile
+      </a>
+    </p>
+  </div>
+</div>
+
+<footer>
+  © 2025 Tumisang Khabisi
+</footer>
+
+</div>
+
+<script>
+const buttons = document.querySelectorAll(".tab-btn");
+const sections = document.querySelectorAll(".section");
+
+buttons.forEach(button => {
+  button.addEventListener("click", () => {
+    buttons.forEach(btn => btn.classList.remove("active"));
+    sections.forEach(sec => sec.classList.remove("active"));
+
+    button.classList.add("active");
+    document.getElementById(button.dataset.tab).classList.add("active");
+  });
+});
+
+function showComingSoon() {
+  document.getElementById("comingSoon").style.display = "block";
+}
+</script>
+
+</body>
+</html>
